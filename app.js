@@ -673,7 +673,7 @@ app.get('/detail', (req, res) => {
 app.post('/cart', isauth, (req, res) => {
   const { id, title, image, quan, price } = req.body;
   Cart.arr.push({ id, title, image, quan: parseInt(quan), price: parseFloat(price) });
-  res.redirect('/home');
+  // res.redirect('/home');
 });
 
 app.get('/cartarray', (req, res) => {

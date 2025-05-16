@@ -215,7 +215,7 @@ app.post(
 
 app.post('/detail', (req, res) => {
   const { image, id, title } = req.body;
-  res.render('datail', { image, id, mess: req.flash('mess'), title });
+  res.render('datail', { image, id, mess: req.flash('mess'), title,session: !!req.session.loggedin  });
 });
 
 app.get('/detail', (req, res) => {
